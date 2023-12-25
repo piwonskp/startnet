@@ -10,4 +10,4 @@ def run(plan, participant, eth_url):
     ]
     rpc_port = 8080
 
-    client.run(plan, "papyrus", "ghcr.io/starkware-libs/papyrus:dev", cmd, rpc_port, eth_url, participant)
+    return client.run(plan, "papyrus", "ghcr.io/starkware-libs/papyrus:dev", cmd, rpc_port, participant)

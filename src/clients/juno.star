@@ -1,5 +1,6 @@
 client = import_module("./client.star")
 
+
 def run(plan, participant, eth_url):
     cmd = [
         '--http', 
@@ -14,4 +15,4 @@ def run(plan, participant, eth_url):
     ]
     rpc_port = 6060
 
-    client.run(plan, "juno", "nethermind/juno", cmd, rpc_port, eth_url, participant)
+    return client.run(plan, "juno", "nethermind/juno", cmd, rpc_port, participant)

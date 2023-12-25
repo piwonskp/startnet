@@ -1,5 +1,5 @@
-def run(plan, name, default_image, default_cmd, rpc_port, eth_url, participant):
-    plan.add_service(
+def run(plan, name, default_image, default_cmd, rpc_port, participant):
+    return plan.add_service(
         name=name,
         config=ServiceConfig(
             image=participant.get("image", default_image),
