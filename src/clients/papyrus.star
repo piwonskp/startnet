@@ -1,7 +1,7 @@
 client = import_module("./client.star")
 
 
-def run(plan, participant, eth_url):
+def run(plan, name, participant, eth_url):
     cmd = [
         '--base_layer.node_url', 
         eth_url, 
@@ -10,4 +10,4 @@ def run(plan, participant, eth_url):
     ]
     rpc_port = 8080
 
-    return client.run(plan, "papyrus", "ghcr.io/starkware-libs/papyrus:dev", cmd, rpc_port, participant)
+    return client.run(plan, name, "ghcr.io/starkware-libs/papyrus:dev", cmd, rpc_port, participant)
